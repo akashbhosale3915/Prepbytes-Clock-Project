@@ -28,6 +28,7 @@ setInterval(clock, 1000);
 // on button click function
 
 const setalarm = () => {
+  // show timings div
   let wt = document.getElementById("wt"),
     lt = document.getElementById("lt"),
     nt = document.getElementById("nt"),
@@ -41,76 +42,62 @@ const setalarm = () => {
   lt.innerText = lunch.options[lunch.selectedIndex].text;
   nt.innerText = nap.options[nap.selectedIndex].text;
   nit.innerText = night.options[night.selectedIndex].text;
+  // show timings div end
+
+  // dropdown dynamic logic
+  let i = document.getElementById("wakeup").value;
+  let j = document.getElementById("lunch").value;
+  let k = document.getElementById("nap").value;
+  let l = document.getElementById("night").value;
+  let unitime = new Date().getHours();
 
   // wakeup
 
-  let i = document.getElementById("wakeup").value;
-  let hour = new Date().getHours();
-
-  if (i == hour) {
+  if (i == unitime) {
     document.getElementById("time-img").style.backgroundImage =
       "url(./Images/wake.png)";
     document.getElementById("left-msg").innerText = "GOOD MORNING! WAKE UP!";
     document.getElementById("right-msg").innerText =
       "GRAB SOME HEALTHY BREAKFAST!!!";
-  } else if (i != hour) {
-    document.getElementById("time-img").style.backgroundImage =
-      "url(./Images/party.png)";
-    document.getElementById("left-msg").innerText = "Party Time!";
-    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // lunch
 
-  let j = document.getElementById("lunch").value;
-  let hour1 = new Date().getHours();
-
-  if (j == hour1) {
+  if (j == unitime) {
     document.getElementById("time-img").style.backgroundImage =
       "url(./Images/lunch.png)";
     document.getElementById("left-msg").innerText =
       "GOOD AFTERNOON !! TAKE SOME SLEEP";
     document.getElementById("right-msg").innerText = "LET'S HAVE SOME LUNCH !!";
-  } else if (i != hour1) {
-    document.getElementById("time-img").style.backgroundImage =
-      "url(./Images/party.png)";
-    document.getElementById("left-msg").innerText = "Party Time!";
-    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // nap
 
-  let k = document.getElementById("nap").value;
-  let hour2 = new Date().getHours();
-
-  if (k == hour2) {
+  if (k == unitime) {
     document.getElementById("time-img").style.backgroundImage =
       "url(./Images/evening.png)";
     document.getElementById("left-msg").innerText = "GOOD EVENING !!";
     document.getElementById("right-msg").innerText =
       "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
-  } else if (i != hour2) {
-    document.getElementById("time-img").style.backgroundImage =
-      "url(./Images/party.png)";
-    document.getElementById("left-msg").innerText = "Party Time!";
-    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // night
 
-  let l = document.getElementById("night").value;
-  let hour3 = new Date().getHours();
-
-  if (l == hour3) {
+  if (l == unitime) {
     document.getElementById("time-img").style.backgroundImage =
       "url(./Images/night.png)";
     document.getElementById("left-msg").innerText = "GOOD NIGHT !!";
     document.getElementById("right-msg").innerText =
       "CLOSE YOUR EYES AND GO TO SLEEP";
-  } else if (i != hour3) {
+  }
+
+  // no match condition
+
+  if (i != unitime && j != unitime && k != unitime && l != unitime) {
     document.getElementById("time-img").style.backgroundImage =
       "url(./Images/party.png)";
     document.getElementById("left-msg").innerText = "Party Time!";
     document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
+  //dynamic dropdown logic end
 };
