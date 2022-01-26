@@ -132,6 +132,7 @@ body {
   font-size: 30px;
   font-weight: 900;
   font-family: "Righteous", cursive;
+  text-transform: uppercase;
 }
 
 .alarm {
@@ -276,6 +277,7 @@ body {
   color: #8e53f0;
   font-family: "Righteous", cursive;
   font-size: 28px;
+  text-transform: uppercase;
 }
 
 .time-img {

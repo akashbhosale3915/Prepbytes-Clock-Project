@@ -53,6 +53,11 @@ const setalarm = () => {
     document.getElementById("left-msg").innerText = "GOOD MORNING! WAKE UP!";
     document.getElementById("right-msg").innerText =
       "GRAB SOME HEALTHY BREAKFAST!!!";
+  } else if (i != hour) {
+    document.getElementById("time-img").style.backgroundImage =
+      "url(./Images/party.png)";
+    document.getElementById("left-msg").innerText = "Party Time!";
+    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // lunch
@@ -66,6 +71,11 @@ const setalarm = () => {
     document.getElementById("left-msg").innerText =
       "GOOD AFTERNOON !! TAKE SOME SLEEP";
     document.getElementById("right-msg").innerText = "LET'S HAVE SOME LUNCH !!";
+  } else if (i != hour1) {
+    document.getElementById("time-img").style.backgroundImage =
+      "url(./Images/party.png)";
+    document.getElementById("left-msg").innerText = "Party Time!";
+    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // nap
@@ -79,6 +89,11 @@ const setalarm = () => {
     document.getElementById("left-msg").innerText = "GOOD EVENING !!";
     document.getElementById("right-msg").innerText =
       "STOP YAWNING, GET SOME TEA.. ITS JUST EVENING!";
+  } else if (i != hour2) {
+    document.getElementById("time-img").style.backgroundImage =
+      "url(./Images/party.png)";
+    document.getElementById("left-msg").innerText = "Party Time!";
+    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 
   // night
@@ -92,5 +107,10 @@ const setalarm = () => {
     document.getElementById("left-msg").innerText = "GOOD NIGHT !!";
     document.getElementById("right-msg").innerText =
       "CLOSE YOUR EYES AND GO TO SLEEP";
+  } else if (i != hour3) {
+    document.getElementById("time-img").style.backgroundImage =
+      "url(./Images/party.png)";
+    document.getElementById("left-msg").innerText = "Party Time!";
+    document.getElementById("right-msg").innerText = "Lets Party !!!";
   }
 };
