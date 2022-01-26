@@ -287,7 +287,8 @@ body {
   overflow: hidden;
   background-image: url("./Images/party.png");
   background-color: white;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 10px;
 }
